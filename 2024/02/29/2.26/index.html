@@ -104,7 +104,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2024-02-29</span>
-            <span class="time">01:49:27</span>
+            <span class="time">02:02:28</span>
           </span>
           
           <!--  Categories  -->
@@ -126,73 +126,223 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="Chapter-2-Groups"><a href="#Chapter-2-Groups" class="headerlink" title="Chapter 2: Groups"></a>Chapter 2: Groups</h1><h3 id="I-Basic-Concepts"><a href="#I-Basic-Concepts" class="headerlink" title="I Basic Concepts"></a>I Basic Concepts</h3><p>Law of compositions: For a set $S$, a law of composition on set $S$ is a mapping: $S\times S\to S$ i.e. $(a,b)\mapsto ab$ (or $a+b$).</p>
+          <h1 id="chapter-2-groups">Chapter 2: Groups</h1>
+<h3 id="i-basic-concepts">I Basic Concepts</h3>
+<p>Law of compositions: For a set <span
+class="math inline">\(S\)</span>, a law of composition on set <span
+class="math inline">\(S\)</span> is a mapping: <span
+class="math inline">\(S\times S\to S\)</span> i.e. <span
+class="math inline">\((a,b)\mapsto ab\)</span> (or <span
+class="math inline">\(a+b\)</span>).</p>
 <p>Properties:</p>
 <ul>
-<li><p>Associative: We call a law of composition is associative iff $\forall a,b,c\in S,(ab)c&#x3D;a(bc)$. (Associative law)</p>
-</li>
-<li><p>Commutative: We call a law of composition is commutative iff $\forall a,b\in S,ab&#x3D;ba$. (Commutative law)</p>
-</li>
+<li><p>Associative: We call a law of composition is associative iff
+<span class="math inline">\(\forall a,b,c\in S,(ab)c=a(bc)\)</span>.
+(Associative law)</p></li>
+<li><p>Commutative: We call a law of composition is commutative iff
+<span class="math inline">\(\forall a,b\in S,ab=ba\)</span>.
+(Commutative law)</p></li>
 </ul>
-<p>Notation: Usually, we denote the result of composition of $a$ and $b$ as $a+b$ (additive notation) if the law of composition is commutative. And $ab$ (product notation) will carry no implication whether the law is commutative. (For convenience, unless specified, we use to product notation refer to the law of composition.)</p>
-<p>Insight: Associative law is seen more common and “fundamental” (<em>P38, Algebra, M. Artin</em>) than the commutative law.</p>
-<p>Example: Consider the set $S &#x3D; M_{2\times2}(\mathbb{R})$ i.e. the set of $2\times2$ real matrices. Define the law of composition is $(A,B)\mapsto AB$ i.e. the matrix multiplication. It’s associative but not commutative.</p>
+<p>Notation: Usually, we denote the result of composition of <span
+class="math inline">\(a\)</span> and <span
+class="math inline">\(b\)</span> as <span
+class="math inline">\(a+b\)</span> (additive notation) if the law of
+composition is commutative. And <span class="math inline">\(ab\)</span>
+(product notation) will carry no implication whether the law is
+commutative. (For convenience, unless specified, we use to product
+notation refer to the law of composition.)</p>
+<p>Insight: Associative law is seen more common and "fundamental"
+(<em>P38, Algebra, M. Artin</em>) than the commutative law.</p>
+<p>Example: Consider the set <span class="math inline">\(S =
+M_{2\times2}(\mathbb{R})\)</span> i.e. the set of <span
+class="math inline">\(2\times2\)</span> real matrices. Define the law of
+composition is <span class="math inline">\((A,B)\mapsto AB\)</span> i.e.
+the matrix multiplication. It's associative but not commutative.</p>
 <p>Propositions of properties:</p>
-<p>If a law of composition (the mapping $S\times S \to S$) is associative, then $\forall n\in\mathbb{N}, \forall a_1,a_2,\cdots,a_n\in S,$ the value of $a_1a_2\cdots a_n$ is independent of how it’s bracketed. </p>
-<p>A similar propotion on Commutative law is (more obvious): </p>
-<p>If a law of composition (the mapping $S\times S \to S$) is commutative , then $\forall n\in\mathbb{N}, \forall a_1,a_2,\cdots,a_n\in S,$ the value of $a_1a_2\cdots a_n$ is independent of its order. </p>
+<p>If a law of composition (the mapping <span
+class="math inline">\(S\times S \to S\)</span>) is associative, then
+<span class="math inline">\(\forall n\in\mathbb{N}, \forall
+a_1,a_2,\cdots,a_n\in S,\)</span> the value of <span
+class="math inline">\(a_1a_2\cdots a_n\)</span> is independent of how
+it's bracketed.</p>
+<p>A similar propotion on Commutative law is (more obvious):</p>
+<p>If a law of composition (the mapping <span
+class="math inline">\(S\times S \to S\)</span>) is commutative , then
+<span class="math inline">\(\forall n\in\mathbb{N}, \forall
+a_1,a_2,\cdots,a_n\in S,\)</span> the value of <span
+class="math inline">\(a_1a_2\cdots a_n\)</span> is independent of its
+order.</p>
 <p>We give out a brief proof of the proposition on associative law:</p>
-<p>Denote the value of  $a_1a_2\cdots a_n$ without brackets as $[a_1a_2\cdots a_n] &#x3D; (\cdots((a_1a_2)a_3)a_{n-1})\cdots a_n$</p>
-<p>Using Induction to prove this proposition i.e. no matter how it’s bracketed, its value is equal to $[a_1a_2\cdots a_n]$: </p>
-<p>When $n\leq 2$, the proposition holds obviously.</p>
-<p>When $n&#x3D;3$, the proposition holds due to the associative law.</p>
-<p>We suppose when $k\leq n-1$, the proposition (for $k$ elements ) holds, and we consider when $k&#x3D;n$.</p>
-<p>We could find the last bracket at position $i$, that is $a_1\cdots(a_k\cdots a_i)a_{i+1}\cdots a_n$.</p>
-<p>If $i\leq n-1$, then consider the items without $a_n:a_1\cdots(a_k\cdots a_i)a_{i+1}\cdots a_{n-1}$, with induction hypothesis, we know that it is equal to $ [a_1\cdots a_{n-1}] &#x3D; (\cdots((a_1a_2)a_3)\cdots )a_{n-1}$.  So $a_1\cdots(a_k\cdots a_i)a_{i+1}\cdots a_n &#x3D;(\cdots((a_1a_2)a_3)\cdots )a_{n-1} a_n &#x3D; ((\cdots((a_1a_2)a_3)\cdots )a_{n-1}) a_n &#x3D;[a_1a_2\cdots a_n]$. The second equality holds due to the original order of composition.</p>
-<p>If $i &#x3D; n$, then the formula becomes $a_1\cdots a_{k-1}(a_k\cdots a_n)$. Use induction hypothesis on $k$ to $n$, it becomes $a_1\cdots a_{k-1} ((\cdots (a_k a_{k+1})\cdots )a_n)$. Then using associative law (with $a_1\cdots a_{k-1},(\cdots (a_k a_{k+1})\cdots )a_{n-1},a_n$), it will become $(a_1\cdots a_{k-1} (\cdots (a_k a_{k+1})\cdots ))a_n$. This form is finished by above $(i\leq n-1)$.</p>
+<p>Denote the value of <span class="math inline">\(a_1a_2\cdots
+a_n\)</span> without brackets as <span
+class="math inline">\([a_1a_2\cdots a_n] =
+(\cdots((a_1a_2)a_3)a_{n-1})\cdots a_n\)</span></p>
+<p>Using Induction to prove this proposition i.e. no matter how it's
+bracketed, its value is equal to <span
+class="math inline">\([a_1a_2\cdots a_n]\)</span>:</p>
+<p>When <span class="math inline">\(n\leq 2\)</span>, the proposition
+holds obviously.</p>
+<p>When <span class="math inline">\(n=3\)</span>, the proposition holds
+due to the associative law.</p>
+<p>We suppose when <span class="math inline">\(k\leq n-1\)</span>, the
+proposition (for <span class="math inline">\(k\)</span> elements )
+holds, and we consider when <span
+class="math inline">\(k=n\)</span>.</p>
+<p>We could find the last bracket at position <span
+class="math inline">\(i\)</span>, that is <span
+class="math inline">\(a_1\cdots(a_k\cdots a_i)a_{i+1}\cdots
+a_n\)</span>.</p>
+<p>If <span class="math inline">\(i\leq n-1\)</span>, then consider the
+items without <span class="math inline">\(a_n:a_1\cdots(a_k\cdots
+a_i)a_{i+1}\cdots a_{n-1}\)</span>, with induction hypothesis, we know
+that it is equal to $ [a_1a_{n-1}] = (((a_1a_2)a_3))a_{n-1}$. So <span
+class="math inline">\(a_1\cdots(a_k\cdots a_i)a_{i+1}\cdots a_n
+=(\cdots((a_1a_2)a_3)\cdots )a_{n-1} a_n = ((\cdots((a_1a_2)a_3)\cdots
+)a_{n-1}) a_n =[a_1a_2\cdots a_n]\)</span>. The second equality holds
+due to the original order of composition.</p>
+<p>If <span class="math inline">\(i = n\)</span>, then the formula
+becomes <span class="math inline">\(a_1\cdots a_{k-1}(a_k\cdots
+a_n)\)</span>. Use induction hypothesis on <span
+class="math inline">\(k\)</span> to <span
+class="math inline">\(n\)</span>, it becomes <span
+class="math inline">\(a_1\cdots a_{k-1} ((\cdots (a_k a_{k+1})\cdots
+)a_n)\)</span>. Then using associative law (with <span
+class="math inline">\(a_1\cdots a_{k-1},(\cdots (a_k a_{k+1})\cdots
+)a_{n-1},a_n\)</span>), it will become <span
+class="math inline">\((a_1\cdots a_{k-1} (\cdots (a_k a_{k+1})\cdots
+))a_n\)</span>. This form is finished by above <span
+class="math inline">\((i\leq n-1)\)</span>.</p>
 <p>This completes the proof.</p>
-<p>Similar as $1$ for multiplication and $0$ for addition, we want to find a “unit” for the law of composition.</p>
-<p>Definition: Identity（幺元&#x2F;单位元）(Usually denote the identity as $0&#x2F;1(\in S)$, depending on notation of the law of composition.)</p>
+<p>Similar as <span class="math inline">\(1\)</span> for multiplication
+and <span class="math inline">\(0\)</span> for addition, we want to find
+a "unit" for the law of composition.</p>
+<p>Definition: Identity（幺元/单位元）(Usually denote the identity as
+<span class="math inline">\(0/1(\in S)\)</span>, depending on notation
+of the law of composition.)</p>
 <ul>
-<li>An identity for a law of composition $S\times S\to S$ is: $e\in S$ s.t. $\forall a \in S, ea &#x3D; a, ae&#x3D;e$.</li>
+<li>An identity for a law of composition <span
+class="math inline">\(S\times S\to S\)</span> is: <span
+class="math inline">\(e\in S\)</span> s.t. <span
+class="math inline">\(\forall a \in S, ea = a, ae=e\)</span>.</li>
 </ul>
-<p>Lemma: Identity is unique. (In other words, left identity is equal to right identity.)</p>
+<p>Lemma: Identity is unique. (In other words, left identity is equal to
+right identity.)</p>
 <p>Proof:</p>
-<p>If their exists $2$ identities $e’$ and $e$. We have: $e &#x3D; e’e &#x3D; e’$</p>
-<p>The first equality holds due to $e’$ is identity and the second equality holds due to $e$ is identity. </p>
-<p>(This proof can also show that left identity is also right identity and vice versa.)</p>
-<p>After we define identity, we can define what “opposite” means for the law of composition.</p>
-<p>Definition: Invertible（可逆）and Inverse（逆元）(Usually denote the inverse as $-a&#x2F;a^{-1}$.) :</p>
+<p>If their exists <span class="math inline">\(2\)</span> identities
+<span class="math inline">\(e&#39;\)</span> and <span
+class="math inline">\(e\)</span>. We have: <span class="math inline">\(e
+= e&#39;e = e&#39;\)</span></p>
+<p>The first equality holds due to <span
+class="math inline">\(e&#39;\)</span> is identity and the second
+equality holds due to <span class="math inline">\(e\)</span> is
+identity.</p>
+<p>(This proof can also show that left identity is also right identity
+and vice versa.)</p>
+<p>After we define identity, we can define what "opposite" means for the
+law of composition.</p>
+<p>Definition: Invertible（可逆）and Inverse（逆元）(Usually denote the
+inverse as <span class="math inline">\(-a/a^{-1}\)</span>.) :</p>
 <ul>
-<li>Suppose a law of composition $S\times S\to S$ is associative, with an identity $1\in S$. Then $a\in S$ is invertible iff $\exists b\in S, ab &#x3D; ba &#x3D; 1(\in S)$. $b$ is called the inverse of $a$.</li>
+<li>Suppose a law of composition <span class="math inline">\(S\times
+S\to S\)</span> is associative, with an identity <span
+class="math inline">\(1\in S\)</span>. Then <span
+class="math inline">\(a\in S\)</span> is invertible iff <span
+class="math inline">\(\exists b\in S, ab = ba = 1(\in S)\)</span>. <span
+class="math inline">\(b\)</span> is called the inverse of <span
+class="math inline">\(a\)</span>.</li>
 </ul>
-<p>Lemma: </p>
+<p>Lemma:</p>
 <ul>
-<li>If $la &#x3D; 1, ar &#x3D; 1$,then $l &#x3D;r$. (If left inverse and right inverse both exist, then they are equal.)</li>
-<li>$a$ is invertible $\Rightarrow$ $a^{-1}$ is unique. (Inverse is unique.)</li>
-<li>If $a,b$ is invertible, then $ab$ is invertible and $(ab)^{-1} &#x3D; b^{-1}a^{-1}$. (Inverse under law of composition.)</li>
+<li>If <span class="math inline">\(la = 1, ar = 1\)</span>,then <span
+class="math inline">\(l =r\)</span>. (If left inverse and right inverse
+both exist, then they are equal.)</li>
+<li><span class="math inline">\(a\)</span> is invertible <span
+class="math inline">\(\Rightarrow\)</span> <span
+class="math inline">\(a^{-1}\)</span> is unique. (Inverse is
+unique.)</li>
+<li>If <span class="math inline">\(a,b\)</span> is invertible, then
+<span class="math inline">\(ab\)</span> is invertible and <span
+class="math inline">\((ab)^{-1} = b^{-1}a^{-1}\)</span>. (Inverse under
+law of composition.)</li>
 </ul>
 <p>Proof:</p>
 <ul>
-<li>$l&#x3D; lar &#x3D; r$</li>
-<li>If exists $b$ and $c$ that $ba &#x3D; ca &#x3D; 1,ab&#x3D;ac &#x3D; 1$, then $b &#x3D; bac &#x3D; c$.  </li>
-<li>Consider $(ab)(b^{-1}a^{-1})$ and $(b^{-1}a^{-1})(ab)$. $(ab)(b^{-1}a^{-1}) &#x3D; (abb^{-1})a^{-1} &#x3D; aa^{-1}&#x3D;1,(b^{-1}a^{-1})(ab) &#x3D; (b^{-1}a^{-1}a)b&#x3D;b^{-1}b&#x3D;1$</li>
+<li><span class="math inline">\(l= lar = r\)</span></li>
+<li>If exists <span class="math inline">\(b\)</span> and <span
+class="math inline">\(c\)</span> that <span class="math inline">\(ba =
+ca = 1,ab=ac = 1\)</span>, then <span class="math inline">\(b = bac =
+c\)</span>.<br />
+</li>
+<li>Consider <span class="math inline">\((ab)(b^{-1}a^{-1})\)</span> and
+<span class="math inline">\((b^{-1}a^{-1})(ab)\)</span>. <span
+class="math inline">\((ab)(b^{-1}a^{-1}) = (abb^{-1})a^{-1} =
+aa^{-1}=1,(b^{-1}a^{-1})(ab) = (b^{-1}a^{-1}a)b=b^{-1}b=1\)</span></li>
 </ul>
 <p>Example:</p>
-<p>Consider the set $S &#x3D; M_{2\times2}(\mathbb{R})$ and the law of composition mentioned before. Obviously $\exists A,A$ is not invertible. However, consider a subset of $S:$ $S’&#x3D;{X|X\in S, X \text{ is invertible}}$. (It’s closed under the law of composition i.e. matrix multiplication.) $\forall A\in S’,A$ is Invertible. And for those two sets and laws of composition, $I$, or more detailed, $I_{2}$ is the identity.</p>
-<p>Notation: With $n\in \mathbb{N},$ $a\times\cdots(n\text{ factors})\times a &#x3D; a^n, a^{-n} &#x3D; a^{-1}\times\cdots(n\text{ factors})\times a^{-1},a^0 &#x3D; 1(\in S)$(product notation) or $na &#x3D; a+\cdots + a, -na &#x3D; (-a) + \cdots + (-a)$ (additive notation). Notations $\frac ba$</p>
-<p>A <em>group</em>（群） is a set $G$ together with a law of composition $G\times G\to G$ which satisfies: </p>
+<p>Consider the set <span class="math inline">\(S =
+M_{2\times2}(\mathbb{R})\)</span> and the law of composition mentioned
+before. Obviously <span class="math inline">\(\exists A,A\)</span> is
+not invertible. However, consider a subset of <span
+class="math inline">\(S:\)</span> <span
+class="math inline">\(S&#39;=\{X|X\in S, X \text{ is
+invertible}\}\)</span>. (It's closed under the law of composition i.e.
+matrix multiplication.) <span class="math inline">\(\forall A\in
+S&#39;,A\)</span> is Invertible. And for those two sets and laws of
+composition, <span class="math inline">\(I\)</span>, or more detailed,
+<span class="math inline">\(I_{2}\)</span> is the identity.</p>
+<p>Notation: With <span class="math inline">\(n\in \mathbb{N},\)</span>
+<span class="math inline">\(a\times\cdots(n\text{ factors})\times a =
+a^n, a^{-n} = a^{-1}\times\cdots(n\text{ factors})\times a^{-1},a^0 =
+1(\in S)\)</span>(product notation) or <span class="math inline">\(na =
+a+\cdots + a, -na = (-a) + \cdots + (-a)\)</span> (additive notation).
+Notations <span class="math inline">\(\frac ba\)</span></p>
+<p>A <em>group</em>（群） is a set <span
+class="math inline">\(G\)</span> together with a law of composition
+<span class="math inline">\(G\times G\to G\)</span> which satisfies:</p>
 <ul>
-<li>Associativity ($\forall a,b,c\in G, (ab)c &#x3D; a(bc)$)</li>
-<li>$\exists e \in G, e$ is identity. </li>
-<li>$\forall a \in G, a$ is Invertible.</li>
+<li>Associativity (<span class="math inline">\(\forall a,b,c\in G, (ab)c
+= a(bc)\)</span>)</li>
+<li><span class="math inline">\(\exists e \in G, e\)</span> is
+identity.</li>
+<li><span class="math inline">\(\forall a \in G, a\)</span> is
+Invertible.</li>
 </ul>
-<p>If the law of composition only satisfies the first condition, it’s called a <em>semigroup</em>（半群）; if the law of composition satisfies the first two conditions, it’s called a <em>monoid</em>（幺半群）. If the law of composition also satisfies the commutative law, it’s called an <em>abelian group</em>（阿贝尔群&#x2F;交换群）.</p>
-<p>Propositions (Cancellation Law,消去律): Let $a,b,c$ be elements of a group $G$ whose law of composition is written multiplicatively. If $ab &#x3D; ac$, or if $ba &#x3D; ca$, then $b&#x3D;c$. If $ab&#x3D;a$ or if $ba &#x3D; a$, then $b&#x3D;1$.</p>
-<p>Proof: Multiply $a^{-1}$ on the left side of $ab&#x3D;ac$ or the right side of $ba&#x3D;ca$. The second proposition is a special case for $c&#x3D;1$.</p>
-<p>The <em>order</em> of a group $G$ is the number of elements that it contains: $|G| &#x3D;$ # of elements of $G$. (A naive method to decide kinds of groups: finite&#x2F;infinite)</p>
-<p>Some notations of familiar groups: $\mathbb Z^+,\mathbb R^+,\mathbb R^\times,\mathbb C^{+},\mathbb C^{\times}$.(Note that multiplication groups should remove $0$ from the sets.) Moreover, due to ambiguity, it might be better to denote groups like $(\mathbb R,+)$.</p>
-<p>Insight: Given a finite set $S$ with certain order, we can construct a group $G$, whose elements are inversible mappings on $S$ ($S\to S$) and the law of composition is composition mapping ($f,g\mapsto f\circ g$). The number of groups are finite.</p>
+<p>If the law of composition only satisfies the first condition, it's
+called a <em>semigroup</em>（半群）; if the law of composition satisfies
+the first two conditions, it's called a <em>monoid</em>（幺半群）. If
+the law of composition also satisfies the commutative law, it's called
+an <em>abelian group</em>（阿贝尔群/交换群）.</p>
+<p>Propositions (Cancellation Law,消去律): Let <span
+class="math inline">\(a,b,c\)</span> be elements of a group <span
+class="math inline">\(G\)</span> whose law of composition is written
+multiplicatively. If <span class="math inline">\(ab = ac\)</span>, or if
+<span class="math inline">\(ba = ca\)</span>, then <span
+class="math inline">\(b=c\)</span>. If <span
+class="math inline">\(ab=a\)</span> or if <span class="math inline">\(ba
+= a\)</span>, then <span class="math inline">\(b=1\)</span>.</p>
+<p>Proof: Multiply <span class="math inline">\(a^{-1}\)</span> on the
+left side of <span class="math inline">\(ab=ac\)</span> or the right
+side of <span class="math inline">\(ba=ca\)</span>. The second
+proposition is a special case for <span
+class="math inline">\(c=1\)</span>.</p>
+<p>The <em>order</em> of a group <span class="math inline">\(G\)</span>
+is the number of elements that it contains: <span
+class="math inline">\(|G| =\)</span> # of elements of <span
+class="math inline">\(G\)</span>. (A naive method to decide kinds of
+groups: finite/infinite)</p>
+<p>Some notations of familiar groups: <span
+class="math inline">\(\mathbb Z^+,\mathbb R^+,\mathbb R^\times,\mathbb
+C^{+},\mathbb C^{\times}\)</span>.(Note that multiplication groups
+should remove <span class="math inline">\(0\)</span> from the sets.)
+Moreover, due to ambiguity, it might be better to denote groups like
+<span class="math inline">\((\mathbb R,+)\)</span>.</p>
+<p>Insight: Given a finite set <span class="math inline">\(S\)</span>
+with certain order, we can construct a group <span
+class="math inline">\(G\)</span>, whose elements are inversible mappings
+on <span class="math inline">\(S\)</span> (<span
+class="math inline">\(S\to S\)</span>) and the law of composition is
+composition mapping (<span class="math inline">\(f,g\mapsto f\circ
+g\)</span>). The number of groups are finite.</p>
 
         </div>
       </div>
