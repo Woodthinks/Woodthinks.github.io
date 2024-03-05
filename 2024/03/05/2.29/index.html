@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Introduction to symmetric groups and subgroups">
+  <meta name="author" content="Yuxuan Zhou">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="Notes on Abstract Algebra 2"/>
+  <meta property="og:description" content="Introduction to symmetric groups and subgroups" />
+  <meta property="og:site_name" content="Woodthinks"/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://example.com"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Woodthinks" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/1.ico">
+  
+
+  <!-- Site Title -->
+  <title>Woodthinks</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.1.1"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/dark.png)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">Notes on Abstract Algebra 2</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                  Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                  Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a target="_blank" rel="noopener" href="https://github.com/Woodthinks">
+                  
+                  Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="mailto:zhouyx2@shanghaitech.edu.cn">
+                  
+                  Email
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Yuxuan Zhou</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2024-03-05</span>
+            <span class="time">23:26:47</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/Notes/">Notes</a> / <a href="/categories/Notes/Abstract-Algebra/">Abstract Algebra</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/Abstract-Algebra/">#Abstract Algebra</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h1 id="notes-on-abstract-algebra-2">Notes on Abstract Algebra 2</h1>
+<h1 id="chapter-2-groups">Chapter 2: Groups</h1>
+<h3 id="ii-groups-and-subgroups">II Groups and subgroups</h3>
+<p>Consider some algebraic structures: <span
+class="math inline">\(F\)</span> is a field, <span
+class="math inline">\(GL_n(F) = \{n\times n \text{ invertible matrices
+}A\text{ with entries in }F\}\)</span>, with matrix multiplication <span
+class="math inline">\((A, B)\mapsto AB\)</span> as the law of
+composition. <span class="math inline">\((GL_n(F),\times)\)</span> forms
+a group. Usually, the group is called a <span
+class="math inline">\(n\times n\)</span> <em>general linear
+group</em>.</p>
+<p>Take any set <span class="math inline">\(T\)</span>, and consider
+bijective mappings from <span class="math inline">\(T\)</span> to <span
+class="math inline">\(T\)</span> i.e. operators on <span
+class="math inline">\(T\)</span>. Recall that bijective mappings have
+inverses. Then <span class="math inline">\((\{f:T\to T|f\text{ is
+bijective}\},\circ)\)</span> forms a group, called permutation group of
+<span class="math inline">\(T\)</span>.</p>
+<p>More specifically, when <span class="math inline">\(T =
+\{1,2,\cdots,n\}\)</span>, the permutation group of <span
+class="math inline">\(T\)</span> is called the <em>symmetric group</em>,
+denoted by <span class="math inline">\(S_n\)</span>. That is: <span
+class="math display">\[ S_n \text{ is the group of permutations of the
+indices }\textbf{1,2,}\cdots\textbf{,n} \]</span></p>
+<p>An obvious property is <span class="math inline">\(|S_n| =
+n!\)</span> since there are <span class="math inline">\(n!\)</span>
+permutations for a set of <span class="math inline">\(n\)</span>
+elements.</p>
+<p>The most basic symmetric group is <span
+class="math inline">\(S_2\)</span> (because <span
+class="math inline">\(S_1\)</span> is not meaningful). It contains <span
+class="math inline">\(2\)</span> elements, one is the identity and
+another is the transposition (denoted as <span
+class="math inline">\(x\)</span> here). Because there are <span
+class="math inline">\(2\)</span> elements in <span
+class="math inline">\(S_2\)</span> and <span
+class="math inline">\(x^2\not = x\)</span> due to the cancellation law.
+So <span class="math inline">\(x^2 = 1\)</span> which can be verified by
+definition. Here is the production table of <span
+class="math inline">\(S_2\)</span>:</p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(\times\)</span></th>
+<th><span class="math inline">\(1\)</span></th>
+<th><span class="math inline">\(x\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>$1 $</td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(x\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(x\)</span></td>
+<td><span class="math inline">\(x\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Before we talk about <span class="math inline">\(S_3\)</span> and
+other symmetric groups, let us clarify some notations for
+permutations.</p>
+<p>A <em>permutation</em> of a set <span
+class="math inline">\(S\)</span> a bijective map <span
+class="math inline">\(p\)</span> from a set <span
+class="math inline">\(S\)</span> to itself. We can use a table to
+represent it, for example:</p>
+<table>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(i\)</span></th>
+<th><span class="math inline">\(1\)</span></th>
+<th><span class="math inline">\(2\)</span></th>
+<th><span class="math inline">\(3\)</span></th>
+<th><span class="math inline">\(4\)</span></th>
+<th><span class="math inline">\(5\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(p(i)\)</span></td>
+<td><span class="math inline">\(3\)</span></td>
+<td><span class="math inline">\(5\)</span></td>
+<td><span class="math inline">\(4\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>The table notation is complicated and time-consuming when writing.
+Here we introduce another representation method: cycle notation.
+Notation <span class="math inline">\((a_1a_2\cdots a_m)(m\leq
+n)\)</span> indicates a mapping <span class="math inline">\(f\)</span>,
+that <span class="math display">\[f(i)=
+\left\{
+    \begin{aligned}
+    a_{j+1} &amp;  &amp; i=a_j(j&lt; m) \\
+    a_1 &amp; &amp; i=a_m \\
+    i &amp; &amp; \text{otherwise}
+    \end{aligned}
+\right.\]</span> They compose as the rules of mapping composition. For
+example <span class="math inline">\({(1452)(351)(25)}={(135)}\)</span>.
+And one mapping can be written into different cycles: <span
+class="math inline">\((134)=(341)\)</span>. Disjoint cycles are
+commutative: <span class="math inline">\((25)(134)=(134)(25)\)</span>.
+We also call <span class="math inline">\(2-\)</span>cycles as
+transitions.</p>
+<p>Then consider how to use disjoint cycles to represent permutations.
+Proposition (Cycle decomposition): Any permutation in <span
+class="math inline">\(S_n\)</span> can be written as a product of
+disjoint cycles. Proposition (Expansion of large cycles): <span
+class="math inline">\((a_1\cdots
+a_m)=(a_1a_m)(a_1a_{m-1})\cdots(a_1a_2)\)</span>. These two propositions
+show that <span class="math inline">\(\forall\)</span> permutation <span
+class="math inline">\(p\in S_n\)</span>, <span
+class="math inline">\(p\)</span> can be written as a product of <span
+class="math inline">\(2-\)</span>cycles.</p>
+<p>Note that equivalent permutations have something in common. First, we
+give out the definition of permutation matrices. Denote <span
+class="math inline">\(e_{ij}\)</span> as the matrix unit with <span
+class="math inline">\(i,j\)</span>-th entry <span
+class="math inline">\(1\)</span> and others <span
+class="math inline">\(0\)</span>. Then the permutation matrix of <span
+class="math inline">\(p\in S_n\)</span> is <span
+class="math inline">\(P=\sum_{i=1}^ne_{p(i),i}\)</span>. E.g. <span
+class="math inline">\(p=(1,2,3)\in S_3,P = e_{21}+e_{32}+e_{13} =
+\begin{bmatrix}
+    0 &amp; 0 &amp; 1 \\
+    1 &amp; 0 &amp; 0 \\
+    0 &amp; 1 &amp; 0
+\end{bmatrix}\)</span> Proposition of permutation matrix: If <span
+class="math inline">\(P\)</span> is the permutation matrix of <span
+class="math inline">\(p\in S_n\)</span>, <span
+class="math inline">\(det(P)\in\{1,-1\}.\)</span> Suppose <span
+class="math inline">\(P, Q\)</span> is the permutation matrix of <span
+class="math inline">\(p,q\)</span>, then <span
+class="math inline">\(PQ\)</span> is the permutation matrix of <span
+class="math inline">\(pq(p\circ q).\)</span> The sign of permutation is
+defined as the determinant of the permutation matrix. Here we give out
+some formulas of the sign of the permutation matrix:</p>
+<ul>
+<li><span class="math inline">\(sgn(PQ) = sgn(P)sgn(Q)\)</span>.</li>
+<li><span class="math inline">\(sgn((a b)) =1,sgn((a b c)) =
+-1\)</span>.</li>
+<li><span class="math inline">\(sgn((a_1\cdots a_m)) =
+(-1)^{m-1}\)</span>.</li>
+</ul>
+<p>We come back to <span class="math inline">\(S_3\)</span>, the
+smallest group not abelian. The identity element <span
+class="math inline">\(1\)</span> is <span class="math inline">\(i(n) =
+n\)</span>, the constant mapping. Denote the cyclic permutation <span
+class="math inline">\({(123)}\)</span> as <span
+class="math inline">\(x\in S_3\)</span> and easy to verify that <span
+class="math inline">\(x^3=1\)</span>. Note that there are <span
+class="math inline">\(6\)</span> elements in <span
+class="math inline">\(S_3\)</span>, so we can't use <span
+class="math inline">\(x^i\)</span> to represent all elements in <span
+class="math inline">\(S_3\)</span>. Take another element, transposition
+for the first elements <span class="math inline">\({(12)}\)</span> and
+denote it as <span class="math inline">\(y\)</span>. We can find <span
+class="math inline">\(y^2=1\)</span> and <span
+class="math inline">\(yx=x^2y\)</span>. Note that <span
+class="math inline">\(S_3\)</span> is not abelian otherwise <span
+class="math inline">\(xy\)</span> will be equal to <span
+class="math inline">\(yx\)</span>. And none of <span
+class="math inline">\(S_n(n\geq 3)\)</span> are abelian (<span
+class="math inline">\((12),(123)\in
+S_n(n\geq3),(12)(123)\not=(123)(12)\)</span>).</p>
+<p>Then we can represent <span class="math inline">\(S_3\)</span> by
+<span class="math inline">\(\{1,x,x^2,y,yx,yx^2\}\)</span>. The rules
+(<span class="math inline">\(x^3=1,y^2=1,xy=y^2x\)</span>) together with
+the associative law ensure that all elements in <span
+class="math inline">\(S_3\)</span> can be written in the form of <span
+class="math inline">\(x^iy^j,(0\leq x\leq2,0\leq y\leq1)\)</span>. For
+instance, the element <span class="math inline">\(x^{-1}y^3x^2y\)</span>
+can be written into:</p>
+<p><span
+class="math display">\[x^{-1}y^3x^2y\overset{x^3=1}=x^2yx^2y=x^2(yx)xy\overset{yx=x^2y}=x^2(x^2y)xy\overset{x^3=1}=xyxy\overset{yx=x^2y}=x(x^2y)y=1.\]</span></p>
+<p>We call <span class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> generators of groups <span
+class="math inline">\(S_3\)</span> and the rules <em>defining
+relations</em> since every element in <span
+class="math inline">\(S_3\)</span> can be written in the form of <span
+class="math inline">\(x^iy^j\)</span> by the rules and the associative
+law. Note that a group may have different generators. A naive set of
+generators for a group <span class="math inline">\((G,\cdot)\)</span> is
+<span class="math inline">\(G\)</span>, because <span
+class="math inline">\(\forall g_i\in G,g_i = g_i^1\Rightarrow \forall
+g\in G, g=\prod_{i=1} g^{x_i}_i\)</span>, where <span
+class="math inline">\(\sum_{i=1}^{|G|}x_i=1,x_i\in
+\mathbb{N}\)</span>.</p>
+<p>Insight: There exist similarities between spanning vectors for vector
+space and generators of groups.</p>
+<p>Like subspaces are to vector spaces, subsets are to sets, we can
+define subgroups:</p>
+<p>A subset <span class="math inline">\(H\)</span> of a group is a
+<em>subgroup</em> if it has the following properties:</p>
+<ul>
+<li>Closure: <span class="math inline">\(\forall a,b\in H,ab\in
+H\)</span>.</li>
+<li>Indetity: <span class="math inline">\(1\in H\)</span>.</li>
+<li>Inverses: <span class="math inline">\(\forall a\in H,a^{-1}\in
+H\)</span>.</li>
+</ul>
+<p>Then <span class="math inline">\(H\)</span> is a group with respect
+to the operation on <span class="math inline">\(G\)</span> Proof:</p>
+<ul>
+<li><span class="math inline">\(\forall a,b,c\in H, H\subset
+G\Rightarrow a,b,c\in G\Rightarrow a(bc) = (ab)c\)</span></li>
+<li><span class="math inline">\(1\in H\Rightarrow \forall a\in H,\exists
+1\in H, 1a=a1=a\)</span>.</li>
+<li><span class="math inline">\(\forall a \in H, a^{-1}\in H\)</span> by
+definition.</li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>The set of complex numbers of absolute value <span
+class="math inline">\(1\)</span> is a subgroup of <span
+class="math inline">\((C,\times)\)</span>.</li>
+<li>The group of <span class="math inline">\(n\times n\)</span> matrices
+with determinant <span class="math inline">\(1\)</span> is a subgroup of
+<span class="math inline">\(GL_n(\mathbb{R})\)</span>. (Also denote the
+subgroup as <span class="math inline">\(SL_n(\mathbb R)\)</span>, called
+<em>special linear group</em>).</li>
+<li>The set of even permutations <span
+class="math inline">\((A_n=\{\sigma\in S_n|sgn(\sigma)=1\})\)</span> is
+a subgroup of <span class="math inline">\(S_n\)</span>. (Also called
+alternating group.)</li>
+</ul>
+<p>Insight: Why not use a more general range of matrices, like with
+determinant absolute value <span class="math inline">\(1\)</span>? Note
+that <span class="math inline">\((\{x\in\mathbb C||x|
+=1\},\times)\)</span> is also a group. We may "combine" these two groups
+to get the ones with more range. This could lead to the definition of
+product groups. Notice that <span class="math inline">\(A_n\)</span> can
+be written in a better form with <span
+class="math inline">\(S_n\)</span>. <span
+class="math inline">\((A_n=\{\sigma^2|\sigma\in S_n\})\)</span>.</p>
+<p>Two trivial subgroups for a group <span
+class="math inline">\(G\)</span> are <span
+class="math inline">\(1_G\)</span> and <span
+class="math inline">\(G\)</span>. <span
+class="math inline">\(\{1_G\}\)</span> satisfies the properties
+above.(Use <span class="math inline">\(1_G\)</span> to clarify <span
+class="math inline">\(1_G\)</span> and the scalar <span
+class="math inline">\(1\)</span>.) Easy to verify that <span
+class="math inline">\(G\)</span> is also a subgroup of <span
+class="math inline">\(G\)</span>. A subgroup is a <em>proper
+subgroup</em> if it is not one of those two.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <p class="copyright text-muted">
+          Theme By <a target="_blank" href="https://github.com/levblanc">Levblanc.</a>
+          Inspired By <a target="_blank" href="https://github.com/klugjo/hexo-theme-clean-blog">Clean Blog.</a>
+        <p class="copyright text-muted">
+          Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/js/highlight.pack.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+  </body>
+</html>
+
