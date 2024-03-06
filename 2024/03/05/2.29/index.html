@@ -114,7 +114,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2024-03-05</span>
-            <span class="time">21:14:59</span>
+            <span class="time">21:16:33</span>
           </span>
           
           <!--  Categories  -->
@@ -136,140 +136,258 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1>Chapter 2 Groups II: Groups and subgroups</h1>
+          <h2 id="chapter-2-groups-ii-groups-and-subgroups">Chapter 2 Groups II:
+Groups and subgroups</h2>
 <span id="more"></span>
-<p>Consider some algebraic structures:<br>
-$F$ is a field, $GL_n(F) = {n\times n \text{ invertible matrices }A\text{ with entries in }F}$, with matrix multiplication $(A, B)\mapsto AB$ as the law of composition. $(GL_n(F),\times)$ forms a group. Usually, the group is called a $n\times n$ <em>general linear group</em>.</p>
-<p>Take any set $T$, and consider bijective mappings from $T$ to $T$ i.e. operators on $T$. Recall that bijective mappings have inverses. Then $({f:T\to T|f\text{ is bijective}},\circ)$ forms a group, called permutation group of $T$.</p>
-<p>More specifically, when $T = {1,2,\cdots,n}$, the permutation group of $T$ is called the <em>symmetric group</em>, denoted by $S_n$.<br>
-That is:<br>
-$$ S_n \text{ is the group of permutations of the indices }\textbf{1,2,}\cdots\textbf{,n} $$</p>
-<p>An obvious property is $|S_n| = n!$ since there are $n!$ permutations for a set of $n$ elements.</p>
-<p>The most basic symmetric group is $S_2$ (because $S_1$ is not meaningful). It contains $2$ elements, one is the identity and another is the transposition (denoted as $x$ here). Because there are $2$ elements in $S_2$ and $x^2\not = x$ due to the cancellation law. So $x^2 = 1$ which can be verified by definition. Here is the production table of $S_2$:</p>
+<p>Consider some algebraic structures: <span
+class="math inline">\(F\)</span> is a field, <span
+class="math inline">\(GL_n(F) = \{n\times n \text{ invertible matrices
+}A\text{ with entries in }F\}\)</span>, with matrix multiplication <span
+class="math inline">\((A, B)\mapsto AB\)</span> as the law of
+composition. <span class="math inline">\((GL_n(F),\times)\)</span> forms
+a group. Usually, the group is called a <span
+class="math inline">\(n\times n\)</span> <em>general linear
+group</em>.</p>
+<p>Take any set <span class="math inline">\(T\)</span>, and consider
+bijective mappings from <span class="math inline">\(T\)</span> to <span
+class="math inline">\(T\)</span> i.e. operators on <span
+class="math inline">\(T\)</span>. Recall that bijective mappings have
+inverses. Then <span class="math inline">\((\{f:T\to T|f\text{ is
+bijective}\},\circ)\)</span> forms a group, called permutation group of
+<span class="math inline">\(T\)</span>.</p>
+<p>More specifically, when <span class="math inline">\(T =
+\{1,2,\cdots,n\}\)</span>, the permutation group of <span
+class="math inline">\(T\)</span> is called the <em>symmetric group</em>,
+denoted by <span class="math inline">\(S_n\)</span>. That is: <span
+class="math display">\[ S_n \text{ is the group of permutations of the
+indices }\textbf{1,2,}\cdots\textbf{,n} \]</span></p>
+<p>An obvious property is <span class="math inline">\(|S_n| =
+n!\)</span> since there are <span class="math inline">\(n!\)</span>
+permutations for a set of <span class="math inline">\(n\)</span>
+elements.</p>
+<p>The most basic symmetric group is <span
+class="math inline">\(S_2\)</span> (because <span
+class="math inline">\(S_1\)</span> is not meaningful). It contains <span
+class="math inline">\(2\)</span> elements, one is the identity and
+another is the transposition (denoted as <span
+class="math inline">\(x\)</span> here). Because there are <span
+class="math inline">\(2\)</span> elements in <span
+class="math inline">\(S_2\)</span> and <span
+class="math inline">\(x^2\not = x\)</span> due to the cancellation law.
+So <span class="math inline">\(x^2 = 1\)</span> which can be verified by
+definition. Here is the production table of <span
+class="math inline">\(S_2\)</span>:</p>
 <table>
 <thead>
-<tr>
-<th>$\times$</th>
-<th>$1$</th>
-<th>$x$</th>
+<tr class="header">
+<th><span class="math inline">\(\times\)</span></th>
+<th><span class="math inline">\(1\)</span></th>
+<th><span class="math inline">\(x\)</span></th>
 </tr>
 </thead>
 <tbody>
-<tr>
+<tr class="odd">
 <td>$1 $</td>
-<td>$1$</td>
-<td>$x$</td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(x\)</span></td>
 </tr>
-<tr>
-<td>$x$</td>
-<td>$x$</td>
-<td>$1$</td>
+<tr class="even">
+<td><span class="math inline">\(x\)</span></td>
+<td><span class="math inline">\(x\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
 </tr>
 </tbody>
 </table>
-<p>Before we talk about $S_3$ and other symmetric groups, let us clarify some notations for permutations.</p>
-<p>A <em>permutation</em> of a set $S$ a bijective map $p$ from a set $S$ to itself. We can use a table to represent it, for example:</p>
+<p>Before we talk about <span class="math inline">\(S_3\)</span> and
+other symmetric groups, let us clarify some notations for
+permutations.</p>
+<p>A <em>permutation</em> of a set <span
+class="math inline">\(S\)</span> a bijective map <span
+class="math inline">\(p\)</span> from a set <span
+class="math inline">\(S\)</span> to itself. We can use a table to
+represent it, for example:</p>
 <table>
 <thead>
-<tr>
-<th>$i$</th>
-<th>$1$</th>
-<th>$2$</th>
-<th>$3$</th>
-<th>$4$</th>
-<th>$5$</th>
+<tr class="header">
+<th><span class="math inline">\(i\)</span></th>
+<th><span class="math inline">\(1\)</span></th>
+<th><span class="math inline">\(2\)</span></th>
+<th><span class="math inline">\(3\)</span></th>
+<th><span class="math inline">\(4\)</span></th>
+<th><span class="math inline">\(5\)</span></th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td>$p(i)$</td>
-<td>$3$</td>
-<td>$5$</td>
-<td>$4$</td>
-<td>$1$</td>
-<td>$2$</td>
+<tr class="odd">
+<td><span class="math inline">\(p(i)\)</span></td>
+<td><span class="math inline">\(3\)</span></td>
+<td><span class="math inline">\(5\)</span></td>
+<td><span class="math inline">\(4\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(2\)</span></td>
 </tr>
 </tbody>
 </table>
-<p>The table notation is complicated and time-consuming when writing. Here we introduce another representation method: cycle notation.<br>
-Notation $(a_1a_2\cdots a_m)(m\leq n)$ indicates a mapping $f$, that<br>
-$$f(i)=<br>
-\left{<br>
-\begin{aligned}<br>
-a_{j+1} &amp;  &amp; i=a_j(j&lt; m) \<br>
-a_1 &amp; &amp; i=a_m \<br>
-i &amp; &amp; \text{otherwise}<br>
-\end{aligned}<br>
-\right.$$<br>
-They compose as the rules of mapping composition. For example ${(1452)(351)(25)}={(135)}$. And one mapping can be written into different cycles: $(134)=(341)$. Disjoint cycles are commutative: $(25)(134)=(134)(25)$. We also call $2-$cycles as transitions.</p>
-<p>Then consider how to use disjoint cycles to represent permutations.<br>
-Proposition (Cycle decomposition): Any permutation in $S_n$ can be written as a product of disjoint cycles.<br>
-Proposition (Expansion of large cycles): $(a_1\cdots a_m)=(a_1a_m)(a_1a_{m-1})\cdots(a_1a_2)$.<br>
-These two propositions show that $\forall$ permutation $p\in S_n$, $p$ can be written as a product of $2-$cycles.</p>
-<p>Note that equivalent permutations have something in common. First, we give out the definition of permutation matrices. Denote $e_{ij}$ as the matrix unit with $i,j$-th entry $1$ and others $0$. Then the permutation matrix of $p\in S_n$ is $P=\sum_{i=1}^ne_{p(i),i}$.<br>
-E.g. $p=(1,2,3)\in S_3,P = e_{21}+e_{32}+e_{13} = \begin{bmatrix}<br>
-0 &amp; 0 &amp; 1 \<br>
-1 &amp; 0 &amp; 0 \<br>
-0 &amp; 1 &amp; 0<br>
-\end{bmatrix}$<br>
-Proposition of permutation matrix: If $P$ is the permutation matrix of $p\in S_n$, $det(P)\in{1,-1}.$ Suppose $P, Q$ is the permutation matrix of $p,q$, then $PQ$ is the permutation matrix of $pq(p\circ q).$<br>
-The sign of permutation is defined as the determinant of the permutation matrix. Here we give out some formulas of the sign of the permutation matrix:</p>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>$sgn(PQ) = sgn(P)sgn(Q)$.</p>
-</li>
-<li class="lvl-2">
-<p>$sgn((a b)) =1,sgn((a b c)) = -1$.</p>
-</li>
-<li class="lvl-2">
-<p>$sgn((a_1\cdots a_m)) = (-1)^{m-1}$.</p>
-</li>
+<p>The table notation is complicated and time-consuming when writing.
+Here we introduce another representation method: cycle notation.
+Notation <span class="math inline">\((a_1a_2\cdots a_m)(m\leq
+n)\)</span> indicates a mapping <span class="math inline">\(f\)</span>,
+that <span class="math display">\[f(i)=
+\left\{
+    \begin{aligned}
+    a_{j+1} &amp;  &amp; i=a_j(j&lt; m) \\
+    a_1 &amp; &amp; i=a_m \\
+    i &amp; &amp; \text{otherwise}
+    \end{aligned}
+\right.\]</span> They compose as the rules of mapping composition. For
+example <span class="math inline">\({(1452)(351)(25)}={(135)}\)</span>.
+And one mapping can be written into different cycles: <span
+class="math inline">\((134)=(341)\)</span>. Disjoint cycles are
+commutative: <span class="math inline">\((25)(134)=(134)(25)\)</span>.
+We also call <span class="math inline">\(2-\)</span>cycles as
+transitions.</p>
+<p>Then consider how to use disjoint cycles to represent permutations.
+Proposition (Cycle decomposition): Any permutation in <span
+class="math inline">\(S_n\)</span> can be written as a product of
+disjoint cycles. Proposition (Expansion of large cycles): <span
+class="math inline">\((a_1\cdots
+a_m)=(a_1a_m)(a_1a_{m-1})\cdots(a_1a_2)\)</span>. These two propositions
+show that <span class="math inline">\(\forall\)</span> permutation <span
+class="math inline">\(p\in S_n\)</span>, <span
+class="math inline">\(p\)</span> can be written as a product of <span
+class="math inline">\(2-\)</span>cycles.</p>
+<p>Note that equivalent permutations have something in common. First, we
+give out the definition of permutation matrices. Denote <span
+class="math inline">\(e_{ij}\)</span> as the matrix unit with <span
+class="math inline">\(i,j\)</span>-th entry <span
+class="math inline">\(1\)</span> and others <span
+class="math inline">\(0\)</span>. Then the permutation matrix of <span
+class="math inline">\(p\in S_n\)</span> is <span
+class="math inline">\(P=\sum_{i=1}^ne_{p(i),i}\)</span>. E.g. <span
+class="math inline">\(p=(1,2,3)\in S_3,P = e_{21}+e_{32}+e_{13} =
+\begin{bmatrix}
+    0 &amp; 0 &amp; 1 \\
+    1 &amp; 0 &amp; 0 \\
+    0 &amp; 1 &amp; 0
+\end{bmatrix}\)</span> Proposition of permutation matrix: If <span
+class="math inline">\(P\)</span> is the permutation matrix of <span
+class="math inline">\(p\in S_n\)</span>, <span
+class="math inline">\(det(P)\in\{1,-1\}.\)</span> Suppose <span
+class="math inline">\(P, Q\)</span> is the permutation matrix of <span
+class="math inline">\(p,q\)</span>, then <span
+class="math inline">\(PQ\)</span> is the permutation matrix of <span
+class="math inline">\(pq(p\circ q).\)</span> The sign of permutation is
+defined as the determinant of the permutation matrix. Here we give out
+some formulas of the sign of the permutation matrix:</p>
+<ul>
+<li><span class="math inline">\(sgn(PQ) = sgn(P)sgn(Q)\)</span>.</li>
+<li><span class="math inline">\(sgn((a b)) =1,sgn((a b c)) =
+-1\)</span>.</li>
+<li><span class="math inline">\(sgn((a_1\cdots a_m)) =
+(-1)^{m-1}\)</span>.</li>
 </ul>
-<p>We come back to $S_3$, the smallest group not abelian. The identity element $1$ is $i(n) = n$, the constant mapping. Denote the cyclic permutation ${(123)}$ as $x\in S_3$ and easy to verify that $x^3=1$. Note that there are $6$ elements in $S_3$, so we can’t use $x^i$ to represent all elements in $S_3$. Take another element, transposition for the first elements ${(12)}$ and denote it as $y$. We can find $y^2=1$ and $yx=x^2y$. Note that $S_3$ is not abelian otherwise $xy$ will be equal to $yx$. And none of $S_n(n\geq 3)$ are abelian ($(12),(123)\in S_n(n\geq3),(12)(123)\not=(123)(12)$).</p>
-<p>Then we can represent $S_3$ by ${1,x,x<sup>2,y,yx,yx</sup>2}$. The rules ($x<sup>3=1,y</sup>2=1,xy=y^2x$) together with the associative law ensure that all elements in $S_3$ can be written in the form of $x<sup>iy</sup>j,(0\leq x\leq2,0\leq y\leq1)$. For instance, the element $x<sup>{-1}y</sup>3x^2y$ can be written into:</p>
-<p>$$x<sup>{-1}y</sup>3x<sup>2y\overset{x</sup>3=1}=x<sup>2yx</sup>2y=x<sup>2(yx)xy\overset{yx=x</sup>2y}=x<sup>2(x</sup>2y)xy\overset{x<sup>3=1}=xyxy\overset{yx=x</sup>2y}=x(x^2y)y=1.$$</p>
-<p>We call $x$ and $y$ generators of groups $S_3$ and the rules <em>defining relations</em> since every element in $S_3$ can be written in the form of $x<sup>iy</sup>j$ by the rules and the associative law. Note that a group may have different generators. A naive set of generators for a group $(G,\cdot)$ is $G$, because $\forall g_i\in G,g_i = g_i^1\Rightarrow \forall g\in G, g=\prod_{i=1} g^{x_i}<em>i$, where $\sum</em>{i=1}^{|G|}x_i=1,x_i\in \mathbb{N}$.</p>
-<p>Insight: There exist similarities between spanning vectors for vector space and generators of groups.</p>
-<p>Like subspaces are to vector spaces, subsets are to sets, we can define subgroups:</p>
-<p>A subset $H$ of a group is a <em>subgroup</em> if it has the following properties:</p>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>Closure: $\forall a,b\in H,ab\in H$.</p>
-</li>
-<li class="lvl-2">
-<p>Indetity: $1\in H$.</p>
-</li>
-<li class="lvl-2">
-<p>Inverses: $\forall a\in H,a^{-1}\in H$.</p>
-</li>
+<p>We come back to <span class="math inline">\(S_3\)</span>, the
+smallest group not abelian. The identity element <span
+class="math inline">\(1\)</span> is <span class="math inline">\(i(n) =
+n\)</span>, the constant mapping. Denote the cyclic permutation <span
+class="math inline">\({(123)}\)</span> as <span
+class="math inline">\(x\in S_3\)</span> and easy to verify that <span
+class="math inline">\(x^3=1\)</span>. Note that there are <span
+class="math inline">\(6\)</span> elements in <span
+class="math inline">\(S_3\)</span>, so we can't use <span
+class="math inline">\(x^i\)</span> to represent all elements in <span
+class="math inline">\(S_3\)</span>. Take another element, transposition
+for the first elements <span class="math inline">\({(12)}\)</span> and
+denote it as <span class="math inline">\(y\)</span>. We can find <span
+class="math inline">\(y^2=1\)</span> and <span
+class="math inline">\(yx=x^2y\)</span>. Note that <span
+class="math inline">\(S_3\)</span> is not abelian otherwise <span
+class="math inline">\(xy\)</span> will be equal to <span
+class="math inline">\(yx\)</span>. And none of <span
+class="math inline">\(S_n(n\geq 3)\)</span> are abelian (<span
+class="math inline">\((12),(123)\in
+S_n(n\geq3),(12)(123)\not=(123)(12)\)</span>).</p>
+<p>Then we can represent <span class="math inline">\(S_3\)</span> by
+<span class="math inline">\(\{1,x,x^2,y,yx,yx^2\}\)</span>. The rules
+(<span class="math inline">\(x^3=1,y^2=1,xy=y^2x\)</span>) together with
+the associative law ensure that all elements in <span
+class="math inline">\(S_3\)</span> can be written in the form of <span
+class="math inline">\(x^iy^j,(0\leq x\leq2,0\leq y\leq1)\)</span>. For
+instance, the element <span class="math inline">\(x^{-1}y^3x^2y\)</span>
+can be written into:</p>
+<p><span
+class="math display">\[x^{-1}y^3x^2y\overset{x^3=1}=x^2yx^2y=x^2(yx)xy\overset{yx=x^2y}=x^2(x^2y)xy\overset{x^3=1}=xyxy\overset{yx=x^2y}=x(x^2y)y=1.\]</span></p>
+<p>We call <span class="math inline">\(x\)</span> and <span
+class="math inline">\(y\)</span> generators of groups <span
+class="math inline">\(S_3\)</span> and the rules <em>defining
+relations</em> since every element in <span
+class="math inline">\(S_3\)</span> can be written in the form of <span
+class="math inline">\(x^iy^j\)</span> by the rules and the associative
+law. Note that a group may have different generators. A naive set of
+generators for a group <span class="math inline">\((G,\cdot)\)</span> is
+<span class="math inline">\(G\)</span>, because <span
+class="math inline">\(\forall g_i\in G,g_i = g_i^1\Rightarrow \forall
+g\in G, g=\prod_{i=1} g^{x_i}_i\)</span>, where <span
+class="math inline">\(\sum_{i=1}^{|G|}x_i=1,x_i\in
+\mathbb{N}\)</span>.</p>
+<p>Insight: There exist similarities between spanning vectors for vector
+space and generators of groups.</p>
+<p>Like subspaces are to vector spaces, subsets are to sets, we can
+define subgroups:</p>
+<p>A subset <span class="math inline">\(H\)</span> of a group is a
+<em>subgroup</em> if it has the following properties:</p>
+<ul>
+<li>Closure: <span class="math inline">\(\forall a,b\in H,ab\in
+H\)</span>.</li>
+<li>Indetity: <span class="math inline">\(1\in H\)</span>.</li>
+<li>Inverses: <span class="math inline">\(\forall a\in H,a^{-1}\in
+H\)</span>.</li>
 </ul>
-<p>Then $H$ is a group with respect to the operation on $G$<br>
-Proof:</p>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>$\forall a,b,c\in H, H\subset G\Rightarrow a,b,c\in G\Rightarrow a(bc) = (ab)c$</p>
-</li>
-<li class="lvl-2">
-<p>$1\in H\Rightarrow \forall a\in H,\exists 1\in H, 1a=a1=a$.</p>
-</li>
-<li class="lvl-2">
-<p>$\forall a \in H, a^{-1}\in H$ by definition.</p>
-</li>
+<p>Then <span class="math inline">\(H\)</span> is a group with respect
+to the operation on <span class="math inline">\(G\)</span> Proof:</p>
+<ul>
+<li><span class="math inline">\(\forall a,b,c\in H, H\subset
+G\Rightarrow a,b,c\in G\Rightarrow a(bc) = (ab)c\)</span></li>
+<li><span class="math inline">\(1\in H\Rightarrow \forall a\in H,\exists
+1\in H, 1a=a1=a\)</span>.</li>
+<li><span class="math inline">\(\forall a \in H, a^{-1}\in H\)</span> by
+definition.</li>
 </ul>
 <p>Examples:</p>
-<ul class="lvl-0">
-<li class="lvl-2">
-<p>The set of complex numbers of absolute value $1$ is a subgroup of $(C,\times)$.</p>
-</li>
-<li class="lvl-2">
-<p>The group of $n\times n$ matrices with determinant $1$ is a subgroup of $GL_n(\mathbb{R})$. (Also denote the subgroup as $SL_n(\mathbb R)$, called <em>special linear group</em>).</p>
-</li>
-<li class="lvl-2">
-<p>The set of even permutations $(A_n={\sigma\in S_n|sgn(\sigma)=1})$ is a subgroup of $S_n$. (Also called alternating group.)</p>
-</li>
+<ul>
+<li>The set of complex numbers of absolute value <span
+class="math inline">\(1\)</span> is a subgroup of <span
+class="math inline">\((C,\times)\)</span>.</li>
+<li>The group of <span class="math inline">\(n\times n\)</span> matrices
+with determinant <span class="math inline">\(1\)</span> is a subgroup of
+<span class="math inline">\(GL_n(\mathbb{R})\)</span>. (Also denote the
+subgroup as <span class="math inline">\(SL_n(\mathbb R)\)</span>, called
+<em>special linear group</em>).</li>
+<li>The set of even permutations <span
+class="math inline">\((A_n=\{\sigma\in S_n|sgn(\sigma)=1\})\)</span> is
+a subgroup of <span class="math inline">\(S_n\)</span>. (Also called
+alternating group.)</li>
 </ul>
-<p>Insight: Why not use a more general range of matrices, like with determinant absolute value $1$? Note that $({x\in\mathbb C||x| =1},\times)$ is also a group. We may “combine” these two groups to get the ones with more range. This could lead to the definition of product groups. Notice that $A_n$ can be written in a better form with $S_n$. $(A_n={\sigma^2|\sigma\in S_n})$.</p>
-<p>Two trivial subgroups for a group $G$ are $1_G$ and $G$. ${1_G}$ satisfies the properties above.(Use $1_G$ to clarify $1_G$ and the scalar $1$.) Easy to verify that $G$ is also a subgroup of $G$. A subgroup is a <em>proper subgroup</em> if it is not one of those two.</p>
+<p>Insight: Why not use a more general range of matrices, like with
+determinant absolute value <span class="math inline">\(1\)</span>? Note
+that <span class="math inline">\((\{x\in\mathbb C||x|
+=1\},\times)\)</span> is also a group. We may "combine" these two groups
+to get the ones with more range. This could lead to the definition of
+product groups. Notice that <span class="math inline">\(A_n\)</span> can
+be written in a better form with <span
+class="math inline">\(S_n\)</span>. <span
+class="math inline">\((A_n=\{\sigma^2|\sigma\in S_n\})\)</span>.</p>
+<p>Two trivial subgroups for a group <span
+class="math inline">\(G\)</span> are <span
+class="math inline">\(1_G\)</span> and <span
+class="math inline">\(G\)</span>. <span
+class="math inline">\(\{1_G\}\)</span> satisfies the properties
+above.(Use <span class="math inline">\(1_G\)</span> to clarify <span
+class="math inline">\(1_G\)</span> and the scalar <span
+class="math inline">\(1\)</span>.) Easy to verify that <span
+class="math inline">\(G\)</span> is also a subgroup of <span
+class="math inline">\(G\)</span>. A subgroup is a <em>proper
+subgroup</em> if it is not one of those two.</p>
 
         </div>
       </div>
